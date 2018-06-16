@@ -116,19 +116,19 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', msg => {
-    if (msg.content === '$invite') {
+    if (msg.content === '.invite') {
       msg.channel.send('Invite **Daminian** https://discordapp.com/api/oauth2/authorize?client_id=457549646525628437&permissions=8&scope=bot :tada:');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === '$support') {
+    if (msg.content === '.support') {
       msg.channel.send('support server ---> https://discord.gg/bprBytJ');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === '$info') {
+    if (msg.content === '.info') {
       msg.channel.send('pentru welcome creaza un channel pe nume `welcome-goodbye` :) ');
     }
   });
