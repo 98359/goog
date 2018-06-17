@@ -147,4 +147,18 @@ client.on('guildMemberAdd', member => {
         channel.sendEmbed(embed);
 });
 
+client.on('guildMemberRemove', member => {
+    let channel = member.guild.channels.find('name', 'welcome');
+    let memberavatar = member.user.avatarURL
+        if (!channel) return;
+        let embed = new Discord.RichEmbed()
+        .setColor('#ff0000')
+        .setThumbnail(memberavatar)
+        .addField('✘ | Name: ', `${member}`)
+        .addField('✘ | Goodbye: ', `Goodbye ${member}`)
+        .setTimestamp()
+
+        channel.sendEmbed(embed);
+});
+
 client.login(process.env.TOKEN);
